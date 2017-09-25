@@ -11,11 +11,11 @@
   ],
   "author": "Archana Sankaranarayanan",
   "license": "MIT",
-  "repository": "GITHUB_NAME/PLUGIN_NAME",
+  "repository": "archana-s/postcss-colorfix",
   "bugs": {
-    "url": "https://github.com/GITHUB_NAME/PLUGIN_NAME/issues"
+    "url": "https://github.com/archana-s/postcss-colorfix/issues"
   },
-  "homepage": "https://github.com/GITHUB_NAME/PLUGIN_NAME",
+  "homepage": "https://github.com/archana-s/postcss-colorfix",
   "dependencies": {
     "cssstats": "^3.1.0",
     "nearest-color": "^0.4.0",
