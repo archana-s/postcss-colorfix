@@ -1,0 +1,38 @@
+{
+  "name": "postcss-colorfix",
+  "version": "0.0.1",
+  "description": "PostCSS plugin to display all hexcode colors and recommending closest colors from variables",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-colorfix",
+    "colors",
+    "variables"
+  ],
+  "author": "Archana Sankaranarayanan",
+  "license": "MIT",
+  "repository": "GITHUB_NAME/PLUGIN_NAME",
+  "bugs": {
+    "url": "https://github.com/GITHUB_NAME/PLUGIN_NAME/issues"
+  },
+  "homepage": "https://github.com/GITHUB_NAME/PLUGIN_NAME",
+  "dependencies": {
+    "cssstats": "^3.1.0",
+    "nearest-color": "^0.4.0",
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}

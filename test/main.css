@@ -1,0 +1,25 @@
+.trend > a{
+  color: red;
+  background: #F09456;
+  border: 1px solid gray;
+}
+
+div.settings {
+  margin: 20px;
+  padding: 10px 4px;
+  background-color: #FAFAF1;
+  color: #333;
+}
+
+.background-test1 a div {
+  background: url('/image.png');
+}
+
+.background-test2 {
+  background: filter(sample);
+  fill: orange;
+}
+
+.fill-color2 {
+  fill: black;
+}
