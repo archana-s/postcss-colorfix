@@ -1,8 +1,8 @@
 const postcss = require('postcss');
+const chalk = require('chalk');
 
 module.exports = postcss.plugin('postcss-colorfix', function (opts) {
     opts = opts || {};
-
     const colorMap = opts.colors;
 
     if (!colorMap || !Object.keys(colorMap).length) {
@@ -14,11 +14,13 @@ module.exports = postcss.plugin('postcss-colorfix', function (opts) {
 
     return function (root, result) {
         const analysis = [];
+        const warning = chalk.hex('#D46946').bold;
+        const error = chalk.hex('#FFFFFF').bgHex('#B5715B');
+        const success = chalk.bgHex('#DAE6CF');
 
         root.walkDecls(/^color|background|fill|border.*/, decl => {
             let value = decl.value;
             const selector = decl.parent.selector;
-
             if (decl.prop.includes('border')) {
                 const allValues = value.split(' ');
                 const borderTypes = ['solid', 'dashed', 'dotted'];
@@ -32,6 +34,10 @@ module.exports = postcss.plugin('postcss-colorfix', function (opts) {
             const correctedColor = nearestColor(value);
 
             if (correctedColor) {
+                console.log(warning(`postcss-colorfix warning: 
+                "${selector}" uses ${error(value)} ${decl.prop}. 
+                 Closest variable is ${success(colorMap[correctedColor])}`));
+
                 analysis.push({
                     originalColor: value,
                     correctedColor: correctedColor,
@@ -41,7 +47,6 @@ module.exports = postcss.plugin('postcss-colorfix', function (opts) {
                 });
             }
         });
-
         result.analysis = analysis;
     };
 });
