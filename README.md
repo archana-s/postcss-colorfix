@@ -6,6 +6,7 @@ Enabling color consistency in your application. You can limit the colors in your
 
 ## Options
 Include all the colors from your palette with their variable names as a map
+```
 {
   colors: {
     '#D2D8CC': '--color-primary',
@@ -13,3 +14,4 @@ Include all the colors from your palette with their variable names as a map
     '#C985A7': '--color-accent'
   }
 }
+```
