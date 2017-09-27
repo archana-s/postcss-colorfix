@@ -1,7 +1,14 @@
-.trend > a{
+.trend > a {
   color: red;
   background: #F09456;
   border: 1px solid gray;
+}
+
+.another-border {
+  border-left: 1px red dashed;
+  border-right: 1px green dashed;
+  border-top: 1px gray dashed;
+  border-bottom: 1px gray dashed;
 }
 
 div.settings {
@@ -16,10 +23,10 @@ div.settings {
 }
 
 .background-test2 {
-  background: filter(sample);
+  filter: blur(20px);
   fill: orange;
 }
 
 .fill-color2 {
-  fill: black;
+  fill: black;  
 }
