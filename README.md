@@ -1,51 +1,15 @@
-# PostCSS Plugin Boilerplate
+# PostCSS Colorfix
+Colorfix monitors colors in your CSS (if not set as a variable) and recommends closest match from your color palette.
 
-<img align="right" width="135" height="95"
-     title="Philosopher’s stone, logo of PostCSS"
-     src="http://postcss.github.io/postcss/logo-leftp.svg">
+## Why use this?
+Enabling color consistency in your application. You can limit the colors in your application to just the palette you define. This can continuously monitor your application for adhering to your preset color palette and maintaining consistency. 
 
-Сreate new PostCSS plugins in a few steps:
-
-1. Clone this repository:
-
-```sh
-git clone https://github.com/postcss/postcss-plugin-boilerplate.git
-```
-
-2. Execute the wizard script. It will ask you a few questions
-   and fill all files with your data.
-
-```sh
-node ./postcss-plugin-boilerplate/start
-```
-
-Call it with `--yarn` argument, if you prefer [yarn](https://yarnpkg.com/)
-package manager:
-
-```sh
-node ./postcss-plugin-boilerplate/start --yarn
-```
-
-Or use `--no-install` if you want to skip dependencies installation.
-
-3. Your plugin repository will now have a clean Git history.
-[Create the GitHub repository](https://github.com/new)
-and push your project there.
-
-4. Add your project to [Travis CI](https://travis-ci.org).
-
-5. Write some code to `index.js` and tests to `test.js`.
-
-6. Execute `npm test` command
-
-7. Add input and output CSS examples to `README.md`.
-
-8. Add options descriptions if your plugin has them.
-
-9. Fill `CHANGELOG.md` with initial version and release it to npm.
-
-10. Fork [PostCSS](https://github.com/postcss/postcss), add your plugin to the
-[Plugins list](https://github.com/postcss/postcss/blob/master/docs/plugins.md)
-and send a pull request.
-
-11. Follow [@PostCSS](https://twitter.com/postcss) to get the latest updates.
+## Options
+Include all the colors from your palette with their variable names as a map
+{
+  colors: {
+    '#D2D8CC': '--color-primary',
+    '#5E7352': '--color-text-primary',
+    '#C985A7': '--color-accent'
+  }
+}
