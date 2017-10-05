@@ -1,7 +1,7 @@
 {
   "name": "postcss-colorfix",
   "version": "0.0.4",
-  "description": "PostCSS plugin to display all hexcode colors and recommending closest colors from variables",
+  "description": "PostCSS plugin to recommend closest colors from your palette set as variables",
   "keywords": [
     "postcss",
     "css",
