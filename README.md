@@ -21,3 +21,4 @@ Provide your color palette as options to postcss-colorfix
 It uses nearest-color to determine the closest match for hexcode, color names and rgb and uses your color palette to recommend what to use in during linting. 
 
 ## What does it look like? 
+![Image of colorfix](./demo.png "Image of colorfix")
