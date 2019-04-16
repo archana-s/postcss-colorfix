@@ -31,7 +31,13 @@ module.exports = postcss.plugin('postcss-colorfix', function (opts) {
                 });
             }
 
-            const correctedColor = nearestColor(value);
+            let correctedColor;
+
+            try {
+                correctedColor = nearestColor(value);
+            } catch (e) {
+                // ignore the failure
+            }
 
             if (correctedColor) {
                 console.log(warning(`postcss-colorfix warning: 
